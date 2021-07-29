@@ -11,3 +11,5 @@ React-Native Gateways Brasil
 7 – Iugu
 8 – PayPal
 9 – PagSeguro
+
+Em Desenvolvimento
