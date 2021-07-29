@@ -1,0 +1,46 @@
+
+{
+  "name": "react-native-gateways",
+  "version": "1.0.0",
+  "description": "Modulo em React-Native para Centralizar as Principais Gateway de Pagamento do Brasil",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João Dematé Jr <joaodematejr@gmail.com> (https://github.com/joaodematejr)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.64.2",
+    "react-native-windows": "0.64.14"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaodematejr/react-native-gateways-br.git"
+  },
+  "homepage": "https://github.com/joaodematejr/react-native-gateways-br-info#readme",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "windows",
+    "device",
+    "events",
+    "moip",
+    "stone",
+    "cielo",
+    "rede",
+    "getnet",
+    "mercado pago",
+    "iugu",
+    "pagSeguro"
+  ],
+  "contributors": [ 
+    {
+      "name": "João Dematé Jr",
+      "email": "joaodematejr@gmail.com",
+      "url": "https://github.com/joaodematejr"
+    }
+  ]
+}
