@@ -1,8 +1,6 @@
 # react-native-gateways-br
 React-Native Gateways Brasil
 
-https://medium.com/wix-engineering/creating-a-native-module-in-react-native-93bab0123e46
-
 
 1 - Moip;
 2 - Stone;
