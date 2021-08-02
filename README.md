@@ -11,5 +11,6 @@ React-Native Gateways Brasil
 7 – Iugu;
 8 – PayPal;
 9 – PagSeguro;
+10 - payGo;
 
 Em Desenvolvimento
