@@ -6,9 +6,30 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath "com.android.tools.build:gradle:7.0.0"
     }
 }
+
+allprojects {
+    repositories {
+        mavenLocal()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url("$rootDir/../node_modules/react-native/android")
+        }
+        maven {
+            // Android JSC is installed from npm
+            url("$rootDir/../node_modules/jsc-android/dist")
+        }
+        maven {
+            url 'https://github.com/pagseguro/PlugPagServiceWrapper/raw/master'
+        }
+        google()
+        jcenter()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
+
 
 apply plugin: 'com.android.library'
 
@@ -17,7 +38,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -33,6 +54,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
+    api 'com.facebook.react:react-native:+'
+    implementation 'br.com.uol.pagseguro.plugpagservice.wrapper:wrapper:1.15.3'
 }
   

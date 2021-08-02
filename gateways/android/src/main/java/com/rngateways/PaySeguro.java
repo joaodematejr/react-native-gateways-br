@@ -1,2 +1,4 @@
-package com.rngateways;public class PaySeguro {
+package com.rngateways;
+
+public class PaySeguro {
 }

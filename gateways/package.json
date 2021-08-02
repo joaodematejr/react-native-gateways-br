@@ -7,12 +7,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "João Dematé Jr <joaodematejr@gmail.com> (https://github.com/joaodematejr)",
   "license": "MIT",
   "peerDependencies": {
+    "react": "^17.0.2",
     "react-native": "^0.64.2",
     "react-native-windows": "0.64.14"
-
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-native": "^0.64.2"
   },
   "repository": {
     "type": "git",
@@ -36,6 +39,10 @@
     "iugu",
     "pagSeguro"
   ],
+  "author": {
+    "name": "João Dematé Jr <joaodematejr@gmail.com> (https://github.com/joaodematejr)",
+    "email": "joaodematejr@gmail.com"
+  },
   "contributors": [ 
     {
       "name": "João Dematé Jr",
