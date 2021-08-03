@@ -26,7 +26,7 @@ Você deve testar suas alterações (e adicionar quaisquer novos elementos em su
 ### Abrindo a solicitação pull
 
 1. Confirme suas alterações com uma mensagem seguindo as [convenções de confirmação angular] (https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
-2. Empurre seu galho para seu garfo
+2. Push seu branch para o seu fork
 3. Crie uma solicitação pull de seu branch em seu fork para `master` neste repo
 4. Faça a fusão da sua filial! : star2:
 
