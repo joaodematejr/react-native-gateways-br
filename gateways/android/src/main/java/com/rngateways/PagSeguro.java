@@ -13,7 +13,7 @@ import br.com.uol.pagseguro.plugpagservice.wrapper.PlugPagAppIdentification;
 import br.com.uol.pagseguro.plugpagservice.wrapper.PlugPagPrintResult;
 import br.com.uol.pagseguro.plugpagservice.wrapper.PlugPagPrinterListener;
 
-public class PaySeguro {
+public class PagSeguro {
 
     private PlugPagAppIdentification appIdentification;
     private PlugPag plugPag;

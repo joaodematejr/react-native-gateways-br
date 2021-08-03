@@ -3,8 +3,6 @@ package com.rngateways;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.facebook.react.bridge.Callback;
-import android.os.Build;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -12,7 +10,7 @@ import com.facebook.react.bridge.ReactMethod;
 
 public class RNGatewaysModule extends ReactContextBaseJavaModule {
 
-  PaySeguro paySeguro = new PaySeguro();
+  PagSeguro pagSeguro = new PagSeguro();
 
   private final ReactApplicationContext reactContext;
   Context context = getReactApplicationContext();
@@ -39,7 +37,7 @@ public class RNGatewaysModule extends ReactContextBaseJavaModule {
     gateway = gateway.toUpperCase();
     switch (gateway){
       case "PAGSEGURO":
-        promise.resolve(paySeguro.getTerminalSerialNumber());
+        promise.resolve(pagSeguro.getTerminalSerialNumber());
         break;
       default:
         promise.resolve("Nenhum gateway encontrado!!!");
@@ -52,7 +50,7 @@ public class RNGatewaysModule extends ReactContextBaseJavaModule {
     gateway = gateway.toUpperCase();
     switch (gateway){
       case "PAGSEGURO":
-        promise.resolve(paySeguro.getLibVersion());
+        promise.resolve(pagSeguro.getLibVersion());
         break;
       default:
         promise.resolve("Nenhum gateway encontrado!!!");
@@ -65,7 +63,7 @@ public class RNGatewaysModule extends ReactContextBaseJavaModule {
     gateway = gateway.toUpperCase();
     switch (gateway){
       case "PAGSEGURO":
-        promise.resolve(paySeguro.setAppIdendification(context, name, version));
+        promise.resolve(pagSeguro.setAppIdendification(context, name, version));
         break;
       default:
         promise.resolve("Nenhum gateway encontrado!!!");
@@ -78,7 +76,7 @@ public class RNGatewaysModule extends ReactContextBaseJavaModule {
     gateway = gateway.toUpperCase();
     switch (gateway){
       case "PAGSEGURO":
-        promise.resolve(paySeguro.checkAuthentication(context));
+        promise.resolve(pagSeguro.checkAuthentication(context));
         break;
       default:
         promise.resolve("Nenhum gateway encontrado!!!");
@@ -91,7 +89,7 @@ public class RNGatewaysModule extends ReactContextBaseJavaModule {
     gateway = gateway.toUpperCase();
     switch (gateway){
       case "PAGSEGURO":
-        promise.resolve(paySeguro.calculateInstallments(value));
+        promise.resolve(pagSeguro.calculateInstallments(value));
         break;
       default:
         promise.resolve("Nenhum gateway encontrado!!!");
@@ -104,7 +102,7 @@ public class RNGatewaysModule extends ReactContextBaseJavaModule {
     gateway = gateway.toUpperCase();
     switch (gateway){
       case "PAGSEGURO":
-        promise.resolve(paySeguro.reprintCustomerReceipt());
+        promise.resolve(pagSeguro.reprintCustomerReceipt());
         break;
       default:
         promise.resolve("Nenhum gateway encontrado!!!");
