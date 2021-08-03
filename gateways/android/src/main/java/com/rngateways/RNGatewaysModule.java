@@ -12,7 +12,10 @@ import com.facebook.react.bridge.ReactMethod;
 
 public class RNGatewaysModule extends ReactContextBaseJavaModule {
 
+  PaySeguro paySeguro = new PaySeguro();
+
   private final ReactApplicationContext reactContext;
+  Context context = getReactApplicationContext();
 
   public RNGatewaysModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -32,9 +35,80 @@ public class RNGatewaysModule extends ReactContextBaseJavaModule {
 
   /*MÉTODO PARA PEGAR O SERIAL*/
   @ReactMethod
-  public void getTerminalSerialNumber(Promise promise, String gateway) throws NoSuchFieldException, IllegalAccessException {
-    String deviceSerial = (String) Build.class.getField("SERIAL").get(null);
-    promise.resolve(deviceSerial);
+  public void getTerminalSerialNumber(String gateway, Promise promise) {
+    gateway = gateway.toUpperCase();
+    switch (gateway){
+      case "PAGSEGURO":
+        promise.resolve(paySeguro.getTerminalSerialNumber());
+        break;
+      default:
+        promise.resolve("Nenhum gateway encontrado!!!");
+    }
+  }
+
+  /*MÉTODO PARA PEGAR O SERIAL*/
+  @ReactMethod
+  public void getLibVersion(String gateway, Promise promise) {
+    gateway = gateway.toUpperCase();
+    switch (gateway){
+      case "PAGSEGURO":
+        promise.resolve(paySeguro.getLibVersion());
+        break;
+      default:
+        promise.resolve("Nenhum gateway encontrado!!!");
+    }
+  }
+
+  /*CRIA A IDENTIFICAÇÃO DO APLICATIVO*/
+  @ReactMethod
+  public void setAppIdendification(String gateway, String name, String version, Promise promise) {
+    gateway = gateway.toUpperCase();
+    switch (gateway){
+      case "PAGSEGURO":
+        promise.resolve(paySeguro.setAppIdendification(context, name, version));
+        break;
+      default:
+        promise.resolve("Nenhum gateway encontrado!!!");
+    }
+  }
+
+  /*VERIFICAR AUTENTICAÇÃO*/
+  @ReactMethod
+  public void checkAuthentication(String gateway, Promise promise) {
+    gateway = gateway.toUpperCase();
+    switch (gateway){
+      case "PAGSEGURO":
+        promise.resolve(paySeguro.checkAuthentication(context));
+        break;
+      default:
+        promise.resolve("Nenhum gateway encontrado!!!");
+    }
+  }
+
+  /*CALCULAR PARCELAS*/
+  @ReactMethod
+  public void calculateInstallments(String gateway, String value, Promise promise) {
+    gateway = gateway.toUpperCase();
+    switch (gateway){
+      case "PAGSEGURO":
+        promise.resolve(paySeguro.calculateInstallments(value));
+        break;
+      default:
+        promise.resolve("Nenhum gateway encontrado!!!");
+    }
+  }
+
+  /*REIMPRESSÃO DA VIA DO CLIENTE*/
+  @ReactMethod
+  public void reprintCustomerReceipt(String gateway, Promise promise) {
+    gateway = gateway.toUpperCase();
+    switch (gateway){
+      case "PAGSEGURO":
+        promise.resolve(paySeguro.reprintCustomerReceipt());
+        break;
+      default:
+        promise.resolve("Nenhum gateway encontrado!!!");
+    }
   }
 
 }
