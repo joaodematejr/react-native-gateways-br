@@ -1,0 +1,6 @@
+com/rngateways/BuildConfig.java
+ com.rngateways.BuildConfig
+com/rngateways/RNGatewaysModule.java
+ com.rngateways.RNGatewaysModule
+com/rngateways/RNGatewaysPackage.java
+ com.rngateways.RNGatewaysPackage

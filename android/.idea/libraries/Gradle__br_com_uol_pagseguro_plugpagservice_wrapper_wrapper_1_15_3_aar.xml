@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: br.com.uol.pagseguro.plugpagservice.wrapper:wrapper:1.15.3@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5af0e1b990c1c59defc430308915094d/transformed/wrapper-1.15.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5af0e1b990c1c59defc430308915094d/transformed/wrapper-1.15.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5af0e1b990c1c59defc430308915094d/transformed/wrapper-1.15.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

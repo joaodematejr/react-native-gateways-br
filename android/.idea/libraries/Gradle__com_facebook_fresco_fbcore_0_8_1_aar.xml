@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.facebook.fresco:fbcore:0.8.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8917387cd21417e01307bdf314e43b3/fbcore-0.8.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b74291177287c3b25df180d86c7232d5/fbcore-0.8.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dff8642bfdb31b7476d82cf6ddf8f37d/transformed/fbcore-0.8.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dff8642bfdb31b7476d82cf6ddf8f37d/transformed/fbcore-0.8.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dff8642bfdb31b7476d82cf6ddf8f37d/transformed/fbcore-0.8.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/fbcore/0.8.1/e9b3fd6679038042864b415bc441aea059531386/fbcore-0.8.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/fbcore/0.8.1/c177b792eb9b4e333b32a23d909ad1249cb9bc30/fbcore-0.8.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
