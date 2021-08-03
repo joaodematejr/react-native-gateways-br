@@ -29,6 +29,60 @@ export default function App() {
     );
   }
 
+  async function handleActionVersion() {
+    RNGateways.getLibVersion('pagseguro').then(
+      result => {
+        console.log(result);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
+  async function handleIdendification() {
+    RNGateways.setAppIdendification('pagseguro', 'appTeste', '0').then(
+      result => {
+        console.log(result);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
+  async function handleCheckAuthentication() {
+    RNGateways.checkAuthentication('pagseguro').then(
+      result => {
+        console.log(result);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+  async function handleCalculateInstallments() {
+    RNGateways.calculateInstallments('pagseguro', '300000').then(
+      result => {
+        console.log(result);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
+  async function handlereprint() {
+    RNGateways.reprintStablishmentReceipt('pagseguro').then(
+      result => {
+        console.log(result);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -40,6 +94,29 @@ export default function App() {
         style={styles.button}
         onPress={() => handleActionSerial()}>
         <Text>Serial</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => handleActionVersion()}>
+        <Text>Versão</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => handleIdendification()}>
+        <Text>Ativar</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => handleCheckAuthentication()}>
+        <Text>Verificar autenticação</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => handleCalculateInstallments()}>
+        <Text>Calcular parcelas</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => handlereprint()}>
+        <Text>Reimpressão</Text>
       </TouchableOpacity>
     </View>
   );
