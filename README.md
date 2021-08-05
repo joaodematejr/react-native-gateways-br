@@ -114,6 +114,9 @@ Segue um modelo para [exemplos de uso](exemplo/App.js) na pasta `exemplo`, de co
         <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/joaodematejr/react-native-gateways-br?color=%F25D24">
       </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=%F25D24">
+     <a href="https://www.linkedin.com/in/joaodemate/">
+      <img alt="João Dematé Jr" src="https://img.shields.io/badge/made%20by-João Dematé-%23?color=%F25D24">
+    </a>
 </div>
 
 ## :memo: Licença
