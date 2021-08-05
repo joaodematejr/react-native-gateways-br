@@ -32,6 +32,19 @@
 - [PayPal](https://developer.paypal.com/docs/integration/paypal-here/sdk-dev/native/)
 - [PayGo](https://dev.paygo.com.br/)
 
+## :file_folder: Repositorio
+
+- [PagSeguro](https://github.com/pagseguro/pagseguro-sdk-plugpagservicewrapper)
+- [Mercado Pago](https://github.com/mercadopago/sdk-java)
+- [Moip](https://github.com/moiplabs/moip-java)
+- [Stone](https://devcenter.stone.com.br/)
+- [Cielo](https://github.com/DeveloperCielo/API-3.0-Java)
+- [Rede](#)
+- [Getnet](#)
+- [Iugu](https://github.com/iugu/iugu-java)
+- [PayPal](https://github.com/paypal/Android-SDK)
+- [PayGo](https://github.com/PGPagamentos/paygo-smart)
+
 ## :iphone: Configuração
 
   <p>
