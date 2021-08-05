@@ -44,7 +44,7 @@
     Kotlin Version 1.3.21
   </p>
   <p>
-    Build Gradle:7.0.0
+    Build Gradle: 7.0.0
   </p>
   <p>
     Compile Sdk Version: 29 
