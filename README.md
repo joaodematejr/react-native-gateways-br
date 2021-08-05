@@ -45,6 +45,19 @@
 - [PayPal](https://github.com/paypal/Android-SDK)
 - [PayGo](https://github.com/PGPagamentos/paygo-smart)
 
+## :floppy_disk: Instalação (Não disponivel até o momento)
+
+Adicione o pacote no seu projeto utilizando `yarn add react-native-gateways-br` ou `npm install react-native-gateways-br`.
+
+## :bulb: Utilização
+
+```js
+import RNGateways from 'react-native-gateways';
+```
+
+Segue um modelo para [exemplos de uso](exemplo/App.js) na pasta `exemplo`, de como utlizar as funções qual você pode utilizar como base.
+
+
 ## :iphone: Configuração
 
   <p>
