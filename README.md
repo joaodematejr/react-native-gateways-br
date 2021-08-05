@@ -55,6 +55,20 @@ Adicione o pacote no seu projeto utilizando `yarn add react-native-gateways-br` 
 import RNGateways from 'react-native-gateways';
 ```
 
+Segue um modelo do JSON para passar em algumas funções
+
+```json
+{
+  "amount": 1000,
+  "installmentType": 1,
+  "installments": 1,
+  "type": 1,
+  "userReference": "PAGAMENTO",
+  "printReceipt": false,
+  "gateway": "PAGSEGURO",
+}
+```
+
 Segue um modelo para [exemplos de uso](exemplo/App.js) na pasta `exemplo`, de como utlizar as funções qual você pode utilizar como base.
 
 
