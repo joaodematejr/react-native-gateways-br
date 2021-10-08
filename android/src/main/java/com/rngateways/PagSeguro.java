@@ -6,8 +6,6 @@ import android.os.Build;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableArray;
 
-import org.jetbrains.annotations.NotNull;
-
 import br.com.uol.pagseguro.plugpagservice.wrapper.PlugPag;
 import br.com.uol.pagseguro.plugpagservice.wrapper.PlugPagAppIdentification;
 import br.com.uol.pagseguro.plugpagservice.wrapper.PlugPagPrintResult;
