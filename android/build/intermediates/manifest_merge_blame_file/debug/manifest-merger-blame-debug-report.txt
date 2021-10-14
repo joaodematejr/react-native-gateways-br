@@ -1,13 +1,22 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.rngateways"
-4    android:versionCode="1"
-5    android:versionName="1.0" >
-6
-7    <uses-sdk
-8        android:minSdkVersion="21"
-8-->/Users/joaodematejr/Documents/Git/react-native-gateways-br/gateways/android/src/main/AndroidManifest.xml
-9        android:targetSdkVersion="29" />
-9-->/Users/joaodematejr/Documents/Git/react-native-gateways-br/gateways/android/src/main/AndroidManifest.xml
-10
-11</manifest>
+3    package="com.rngateways" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="23"
+6-->C:\Users\joaod\Documents\Github\react-native-gateways-br\android\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="30" />
+7-->C:\Users\joaod\Documents\Github\react-native-gateways-br\android\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="br.com.uol.pagseguro.permission.MANAGE_PAYMENTS" />
+9-->C:\Users\joaod\Documents\Github\react-native-gateways-br\android\src\main\AndroidManifest.xml:5:1-82
+9-->C:\Users\joaod\Documents\Github\react-native-gateways-br\android\src\main\AndroidManifest.xml:5:18-80
+10    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+10-->C:\Users\joaod\Documents\Github\react-native-gateways-br\android\src\main\AndroidManifest.xml:6:1-75
+10-->C:\Users\joaod\Documents\Github\react-native-gateways-br\android\src\main\AndroidManifest.xml:6:18-72
+11
+12    <application android:hardwareAccelerated="true" />
+12-->C:\Users\joaod\Documents\Github\react-native-gateways-br\android\src\main\AndroidManifest.xml:7:1-51
+12-->C:\Users\joaod\Documents\Github\react-native-gateways-br\android\src\main\AndroidManifest.xml:7:14-48
+13
+14</manifest>

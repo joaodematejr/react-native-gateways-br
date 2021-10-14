@@ -1,4 +1,3 @@
-
 {
   "name": "react-native-gateways",
   "version": "1.0.0",
@@ -43,7 +42,7 @@
     "name": "João Dematé Jr <joaodematejr@gmail.com> (https://github.com/joaodematejr)",
     "email": "joaodematejr@gmail.com"
   },
-  "contributors": [ 
+  "contributors": [
     {
       "name": "João Dematé Jr",
       "email": "joaodematejr@gmail.com",

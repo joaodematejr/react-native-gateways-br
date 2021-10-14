@@ -73,6 +73,17 @@ export default function App() {
   }
 
   async function handlereprint() {
+    RNGateways.reprintCustomerReceipt('pagseguro').then(
+      result => {
+        console.log(result);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
+  async function handlereprintStablishment() {
     RNGateways.reprintStablishmentReceipt('pagseguro').then(
       result => {
         console.log(result);
@@ -116,7 +127,10 @@ export default function App() {
         <Text>Calcular parcelas</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => handlereprint()}>
-        <Text>Reimpressão</Text>
+        <Text>Reimpressão Cliente</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => handlereprintStablishment()}>
+        <Text>Reimpressão Estabelecimento</Text>
       </TouchableOpacity>
     </View>
   );
