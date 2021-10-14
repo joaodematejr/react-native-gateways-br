@@ -78,7 +78,7 @@ Segue um modelo para [exemplos de uso](exemplo/App.js) na pasta `exemplo`, de co
     React 17.0.2
   </p>
   <p>
-    React Native 0.64.2
+    React Native 0.66.0
   </p>
   <p>
     Kotlin Version 1.3.21
@@ -87,10 +87,10 @@ Segue um modelo para [exemplos de uso](exemplo/App.js) na pasta `exemplo`, de co
     Build Gradle: 7.0.0
   </p>
   <p>
-    Compile Sdk Version: 29 
+    Compile Sdk Version: 30 
   </p>
   <p>
-    Build Tools Version: "29.0.3" 
+    Build Tools Version: "30.0.2" 
   </p>
   <p>
     Min Sdk Version: 23
