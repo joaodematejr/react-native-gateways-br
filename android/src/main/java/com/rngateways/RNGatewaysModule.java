@@ -109,4 +109,17 @@ public class RNGatewaysModule extends ReactContextBaseJavaModule {
     }
   }
 
+  /*REIMPRESSÃO DA VIA DO ESTABELECIMENTO*/
+  @ReactMethod
+  public void reprintStablishmentReceipt(String gateway, Promise promise) {
+    gateway = gateway.toUpperCase();
+    switch (gateway){
+      case "PAGSEGURO":
+        promise.resolve(pagSeguro.reprintStablishmentReceipt());
+        break;
+      default:
+        promise.resolve("Nenhum gateway encontrado!!!");
+    }
+  }
+
 }

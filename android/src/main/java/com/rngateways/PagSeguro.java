@@ -89,7 +89,7 @@ public class PagSeguro {
             return result.getMessage();
         } catch (Exception e) {
             e.printStackTrace();
-            return e.getMessage();
+            return "Error !!! " + e.getMessage();
         }
     }
 
@@ -99,9 +99,7 @@ public class PagSeguro {
             PlugPagPrintResult result = plugPag.reprintCustomerReceipt();
             return result.getMessage();
         } catch (Exception e) {
-            e.printStackTrace();
-            return e.getMessage();
+            return "Error !!! " + e.getMessage();
         }
     }
-
 }
