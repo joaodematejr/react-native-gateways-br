@@ -94,6 +94,34 @@ export default function App() {
     );
   }
 
+  
+  async function handleInitializeAndActivatePinpad() {
+    RNGateways.initializeAndActivatePinpad('pagseguro', '403938').then(
+      result => {
+        console.log(result);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
+  async function handlePayment() {
+    let jsonStr = JSON.stringify(exemploJson)
+    RNGateways.doPayment('pagseguro', jsonStr).then(
+      result => {
+        console.log(result);
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
+
+  
+
+  
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -125,6 +153,12 @@ export default function App() {
         style={styles.button}
         onPress={() => handleCalculateInstallments()}>
         <Text>Calcular parcelas</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => handleInitializeAndActivatePinpad()}>
+        <Text>Ativar Pinpad</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => handlePayment()}>
+        <Text>Pagamento</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => handlereprint()}>
         <Text>Reimpressão Cliente</Text>
