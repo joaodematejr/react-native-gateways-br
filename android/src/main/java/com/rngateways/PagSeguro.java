@@ -65,99 +65,91 @@ public class PagSeguro extends ReactContextBaseJavaModule {
 
 
     /*MÉTODO PARA PEGAR O SERIAL*/
-    public String getTerminalSerialNumber() {
-        String deviceSerial = null;
+    public void getTerminalSerialNumber(Promise promise) {
         try {
-            deviceSerial = (String) Build.class.getField("SERIAL").get(null);
+            String deviceSerial = (String) Build.class.getField("SERIAL").get(null);
+            promise.resolve(deviceSerial);
         } catch (IllegalAccessException e) {
-            return "Error !!! " + e.getMessage();
+            promise.resolve(e);
         } catch (NoSuchFieldException e) {
-            return "Error !!! " + e.getMessage();
+            promise.reject(e);
         }
-        return deviceSerial;
+
     }
 
     /*MÉTODO PARA PEGAR A VERSÃO DA BIBLIOTECA*/
-    public String getLibVersion() {
-        String version = null;
+    public void getLibVersion(Promise promise) {
         try {
-            version = plugPag.getLibVersion();
+            String version = plugPag.getLibVersion();
+            promise.resolve(version);
         } catch (Exception e) {
-            return "Error !!! " + e.getMessage();
+            promise.reject(e);
         }
-        return version;
     }
 
     /*CRIA A IDENTIFICAÇÃO DO APLICATIVO*/
-    public String setAppIdendification(Context context, String name, String version) {
-        String status = null;
+    public void setAppIdendification(Context context, String name, String version, Promise promise) {
         try {
             appIdentification = new PlugPagAppIdentification(name, version);
             plugPag = new PlugPag(context, appIdentification);
-            status = "Identificação Ok!";
+            String status = "Identificação Ok!";
+            promise.resolve(status);
         } catch (Exception e) {
-            return "Error !!! " + e.getMessage();
+            promise.reject(e);
         }
-        return status;
     }
 
     /*VERIFICAR AUTENTICAÇÃO*/
-    public Boolean checkAuthentication(Context context) {
-        Boolean status = null;
+    public void checkAuthentication(Promise promise) {
         try {
             boolean authenticated = plugPag.isAuthenticated();
-            status = authenticated;
+            promise.resolve(authenticated);
         } catch (Exception e) {
-            return Boolean.valueOf("Error !!! " + e.getMessage());
+            promise.reject(e);
         }
-        return status;
     }
 
     /*CALCULAR PARCELAS*/
-    public WritableArray calculateInstallments(String value) {
+    public void calculateInstallments(String value, Promise promise) {
         WritableArray array = Arguments.createArray();
         try {
             String[] installments = plugPag.calculateInstallments(value);
             for (String installment : installments) {
                 array.pushString(installment);
             }
-            return array;
+            promise.resolve(array);
         } catch (Exception e) {
             e.printStackTrace();
-            array.pushString(String.valueOf(e));
-            return array;
+            promise.reject(e);
         }
 
     }
 
     /*REIMPRESSÃO DA VIA DO ESTABELECIMENTO*/
-    public String reprintStablishmentReceipt() {
+    public void reprintStablishmentReceipt(Promise promise) {
         try {
             PlugPagPrintResult result = plugPag.reprintStablishmentReceipt();
-            return result.getMessage();
+            promise.resolve(result);
         } catch (Exception e) {
-            e.printStackTrace();
-            return "Error !!! " + e.getMessage();
+            promise.reject(e);
         }
     }
 
     /*REIMPRESSÃO DA VIA DO CLIENTE*/
-    public String reprintCustomerReceipt() {
+    public void reprintCustomerReceipt(Promise promise) {
         try {
             PlugPagPrintResult result = plugPag.reprintCustomerReceipt();
-            return result.getMessage();
+            promise.resolve(result);
         } catch (Exception e) {
-            return "Error !!! " + e.getMessage();
+            promise.reject(e);
         }
     }
 
 
     /*ATIVA TERMINAL*/
-    public String initializeAndActivatePinpad(String activationCode, Context context) {
+    public void initializeAndActivatePinpad(String activationCode, Promise promise) {
         final PlugPagActivationData activationData = new PlugPagActivationData(activationCode);
-
         ExecutorService executor = Executors.newSingleThreadExecutor();
-
         Callable<PlugPagInitializationResult> callable = new Callable<PlugPagInitializationResult>() {
             @Override
             public PlugPagInitializationResult call() throws Exception {
@@ -172,11 +164,11 @@ public class PagSeguro extends ReactContextBaseJavaModule {
             PlugPagInitializationResult initResult = future.get();
             final WritableMap map = Arguments.createMap();
             map.putInt("retCode", initResult.getResult());
-            return String.valueOf(initResult.getResult());
+            promise.resolve(initResult);
         } catch (ExecutionException e) {
-            return "Error !!! " + e.getMessage();
+            promise.reject(e);
         } catch (InterruptedException e) {
-            return "Error !!! " + e.getMessage();
+            promise.reject(e);
         }
     }
 
